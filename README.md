@@ -1,9 +1,9 @@
-# QA Portfolio – Cypress Real World App (RWA)
+# Cypress Real World App (RWA)
 
 ## About this Project
-This repository contains the QA documentation and test automation for the [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app), a payment application used as a reference project by Cypress.io.
+This repository contains the documentation and test automation for the [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app), a payment application used as a reference project by Cypress.io.
 
-The goal of this project is to demonstrate QA Engineer skills including test planning, test case documentation, bug reporting and test automation.
+The goal of this project is to demonstrate my QA Engineer skills including test planning, test case documentation, bug reporting and test automation.
 
 ---
 
