@@ -1,12 +1,12 @@
 # User Authentication – Test Cases
 
-| Field | Content |
-|---|---|
-| Project | Cypress Real World App (RWA) |
-| Feature | User Authentication |
-| Author | Vanessa Sousa |
-| Creation Date | 01/05/2026 |
-| Status | In Progress |
+| Field         | Content                      |
+| ------------- | ---------------------------- |
+| Project       | Cypress Real World App (RWA) |
+| Feature       | User Authentication          |
+| Author        | Vanessa Sousa                |
+| Creation Date | 01/05/2026                   |
+| Status        | In Progress                  |
 
 ---
 
@@ -20,12 +20,12 @@ This page contains the test cases for the User Authentication feature of the Cyp
 
 ### TC-001: Successful Login with Valid Credentials
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-001 |
-| Feature | User Authentication |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-001                                                                                                                                                                     |
+| Feature       | User Authentication                                                                                                                                                        |
+| Type          | Automated                                                                                                                                                                  |
+| Priority      | Critical                                                                                                                                                                   |
 | Preconditions | The RWA application is running in the local environment. A registered user exists in the seed data. No active session exists in the browser. The database has been seeded. |
 
 #### Scenario
@@ -44,8 +44,8 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field    | Value  |
+| -------- | ------ |
 | Username | Dina20 |
 | Password | s3cret |
 
@@ -55,23 +55,23 @@ The user is successfully authenticated and redirected to the dashboard. The acco
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Executed                                                                                            |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 23/05/2026                                                                                          |
+| Evidence       | ![TC-001 Evidence](https://github.com/user-attachments/assets/28c0e983-5e16-4830-aa6a-fdc77d93f0e3) |
 
 ---
 
 ### TC-002: Login with Invalid Credentials
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-002 |
-| Feature | User Authentication |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-002                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Automated                                                                                         |
+| Priority      | Critical                                                                                          |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -90,9 +90,9 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Username | invalid_user |
+| Field    | Value            |
+| -------- | ---------------- |
+| Username | invalid_user     |
 | Password | invalid_password |
 
 #### Expected Result
@@ -101,23 +101,23 @@ The user remains on the login page. An error message is displayed indicating tha
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-003: Successful User Registration
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-003 |
-| Feature | User Authentication |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-003                                                                                                                                                                                         |
+| Feature       | User Authentication                                                                                                                                                                            |
+| Type          | Automated                                                                                                                                                                                      |
+| Priority      | Critical                                                                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. The database has been seeded. The username testuser_01 does not already exist in the system. |
 
 #### Scenario
@@ -140,13 +140,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | Test |
-| Last Name | User |
-| Username | testuser_01 |
-| Password | Test@1234 |
-| Confirm Password | Test@1234 |
+| Field            | Value       |
+| ---------------- | ----------- |
+| First Name       | Test        |
+| Last Name        | User        |
+| Username         | testuser_01 |
+| Password         | Test@1234   |
+| Confirm Password | Test@1234   |
 
 #### Expected Result
 
@@ -154,23 +154,23 @@ The user is successfully registered. The system redirects the user to the login 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-004: Registration with Incomplete Information
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-004 |
-| Feature | User Authentication |
-| Type | Automated |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-004                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Automated                                                                                         |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -193,13 +193,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | Test |
-| Last Name | User |
-| Username | (left blank) |
-| Password | Test@1234 |
-| Confirm Password | Test@1234 |
+| Field            | Value        |
+| ---------------- | ------------ |
+| First Name       | Test         |
+| Last Name        | User         |
+| Username         | (left blank) |
+| Password         | Test@1234    |
+| Confirm Password | Test@1234    |
 
 #### Expected Result
 
@@ -207,23 +207,23 @@ The "Sign Up" button remains disabled. The error message "Username is required" 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-005: Login with Empty Username Field
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-005 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-005                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -241,10 +241,10 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field    | Value        |
+| -------- | ------------ |
 | Username | (left blank) |
-| Password | s3cret |
+| Password | s3cret       |
 
 #### Expected Result
 
@@ -252,23 +252,23 @@ The "Sign In" button remains disabled. The error message "Username is required" 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-006: Login with Empty Password Field
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-006 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-006                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -286,9 +286,9 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Username | Dina20 |
+| Field    | Value        |
+| -------- | ------------ |
+| Username | Dina20       |
 | Password | (left blank) |
 
 #### Expected Result
@@ -297,23 +297,23 @@ The "Sign In" button remains disabled. The user is not able to submit the login 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-007: Login with Both Fields Empty
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-007 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-007                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -340,23 +340,23 @@ The error message "Username is required" is displayed below the username field. 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-008: Login with Whitespace in Username Field
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-008 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-008                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | Medium                                                                                            |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -376,10 +376,10 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field    | Value             |
+| -------- | ----------------- |
 | Username | (whitespace only) |
-| Password | s3cret |
+| Password | s3cret            |
 
 #### Expected Result
 
@@ -387,23 +387,23 @@ The user remains on the login page. The error message "Username or password is i
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-009: Login with Remember Me Enabled
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-009 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                      |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-009                                                                                                                                       |
+| Feature       | User Authentication                                                                                                                          |
+| Type          | Manual                                                                                                                                       |
+| Priority      | Medium                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. A registered user exists in the seed data. |
 
 #### Scenario
@@ -425,10 +425,10 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Username | Dina20 |
-| Password | s3cret |
+| Field       | Value   |
+| ----------- | ------- |
+| Username    | Dina20  |
+| Password    | s3cret  |
 | Remember Me | Enabled |
 
 #### Expected Result
@@ -437,23 +437,23 @@ The user session persists after closing and reopening the browser. The user is a
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-010: Login with Remember Me Disabled
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-010 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                      |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-010                                                                                                                                       |
+| Feature       | User Authentication                                                                                                                          |
+| Type          | Manual                                                                                                                                       |
+| Priority      | High                                                                                                                                         |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. A registered user exists in the seed data. |
 
 #### Scenario
@@ -475,10 +475,10 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Username | Dina20 |
-| Password | s3cret |
+| Field       | Value    |
+| ----------- | -------- |
+| Username    | Dina20   |
+| Password    | s3cret   |
 | Remember Me | Disabled |
 
 #### Expected Result
@@ -493,23 +493,23 @@ Bug Reference: BUG-001 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 05/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 05/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-011: Registration with Password Not Meeting Requirements
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-011 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-011                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -531,13 +531,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | Test |
-| Last Name | User |
-| Username | testuser_02 |
-| Password | abc |
-| Confirm Password | abc |
+| Field            | Value       |
+| ---------------- | ----------- |
+| First Name       | Test        |
+| Last Name        | User        |
+| Username         | testuser_02 |
+| Password         | abc         |
+| Confirm Password | abc         |
 
 #### Expected Result
 
@@ -545,23 +545,23 @@ The "Sign Up" button remains disabled. The error message "Password must contain 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-012: Registration with Already Existing Username
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-012 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                         |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-012                                                                                                                          |
+| Feature       | User Authentication                                                                                                             |
+| Type          | Manual                                                                                                                          |
+| Priority      | High                                                                                                                            |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. The database has been seeded. |
 
 #### Scenario
@@ -584,12 +584,12 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | Test |
-| Last Name | User |
-| Username | Heath93 |
-| Password | Test@1234 |
+| Field            | Value     |
+| ---------------- | --------- |
+| First Name       | Test      |
+| Last Name        | User      |
+| Username         | Heath93   |
+| Password         | Test@1234 |
 | Confirm Password | Test@1234 |
 
 #### Expected Result
@@ -604,23 +604,23 @@ Bug Reference: BUG-002 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 05/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 05/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-013: Registration with Passwords Not Matching
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-013 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-013                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -642,13 +642,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | Test |
-| Last Name | User |
-| Username | testuser_03 |
-| Password | Test@1234 |
-| Confirm Password | Test@5678 |
+| Field            | Value       |
+| ---------------- | ----------- |
+| First Name       | Test        |
+| Last Name        | User        |
+| Username         | testuser_03 |
+| Password         | Test@1234   |
+| Confirm Password | Test@5678   |
 
 #### Expected Result
 
@@ -656,23 +656,23 @@ The "Sign Up" button remains disabled. The error message "Password does not matc
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-014: Registration with All Fields Empty
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-014 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-014                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -699,23 +699,23 @@ The "Sign Up" button becomes disabled after the submission attempt. The error me
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-015: Registration with Whitespace in All Fields
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-015 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-015                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | High                                                                                              |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -738,12 +738,12 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | (whitespace only) |
-| Last Name | (whitespace only) |
-| Username | (whitespace only) |
-| Password | (whitespace only) |
+| Field            | Value             |
+| ---------------- | ----------------- |
+| First Name       | (whitespace only) |
+| Last Name        | (whitespace only) |
+| Username         | (whitespace only) |
+| Password         | (whitespace only) |
 | Confirm Password | (whitespace only) |
 
 #### Expected Result
@@ -758,23 +758,23 @@ Bug Reference: BUG-003 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 05/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 05/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-016: Registration with Excessively Long Input in All Fields
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-016 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-016                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | Medium                                                                                            |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -797,12 +797,12 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| Last Name | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| Username | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| Password | 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 |
+| Field            | Value                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| First Name       | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| Last Name        | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| Username         | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| Password         | 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 |
 | Confirm Password | 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 |
 
 #### Expected Result
@@ -817,23 +817,23 @@ Bug Reference: BUG-004 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 05/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 05/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-017: Registration with Minimum Invalid Data – Password Below Minimum Length
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-017 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-017                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | Medium                                                                                            |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -855,13 +855,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | a |
-| Last Name | a |
-| Username | a |
-| Password | 1 |
-| Confirm Password | 1 |
+| Field            | Value |
+| ---------------- | ----- |
+| First Name       | a     |
+| Last Name        | a     |
+| Username         | a     |
+| Password         | 1     |
+| Confirm Password | 1     |
 
 #### Expected Result
 
@@ -869,23 +869,23 @@ The "Sign Up" button remains disabled. The error message "Password must contain 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-018: Registration with Minimum Invalid Data – No Minimum Length Validation on Text Fields
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-018 |
-| Feature | User Authentication |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-018                                                                                            |
+| Feature       | User Authentication                                                                               |
+| Type          | Manual                                                                                            |
+| Priority      | Medium                                                                                            |
 | Preconditions | The RWA application is running in the local environment. No active session exists in the browser. |
 
 #### Scenario
@@ -908,13 +908,13 @@ Feature: User Authentication
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| First Name | a |
-| Last Name | a |
-| Username | a |
-| Password | 1234 |
-| Confirm Password | 1234 |
+| Field            | Value |
+| ---------------- | ----- |
+| First Name       | a     |
+| Last Name        | a     |
+| Username         | a     |
+| Password         | 1234  |
+| Confirm Password | 1234  |
 
 #### Expected Result
 
@@ -928,9 +928,9 @@ Bug Reference: BUG-005 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 05/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 05/05/2026             |
+| Evidence       | Pending Loom recording |
