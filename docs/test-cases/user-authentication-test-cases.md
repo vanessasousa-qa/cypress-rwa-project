@@ -101,12 +101,12 @@ The user remains on the login page. An error message is displayed indicating tha
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Executed                                                                                            |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 23/05/2026                                                                                          |
+| Evidence       | ![TC-002 Evidence](https://github.com/user-attachments/assets/58687933-c693-4b95-9773-c5690b9ed2a4) |
 
 ---
 
