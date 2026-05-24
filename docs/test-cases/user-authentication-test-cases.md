@@ -144,9 +144,9 @@ Feature: User Authentication
 | ---------------- | ----------- |
 | First Name       | Test        |
 | Last Name        | User        |
-| Username         | testuser_01 |
-| Password         | Test@1234   |
-| Confirm Password | Test@1234   |
+| Username         | testuser_02 |
+| Password         | Test@123    |
+| Confirm Password | Test@123    |
 
 #### Expected Result
 
@@ -154,12 +154,12 @@ The user is successfully registered. The system redirects the user to the login 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Executed                                                                                            |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 24/05/2026                                                                                          |
+| Evidence       | ![TC-003 Evidence](https://github.com/user-attachments/assets/9fcb8f15-9afa-4233-a6d2-3d774bd7f2af) |
 
 ---
 

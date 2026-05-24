@@ -21,4 +21,21 @@ describe("User Authentication", () => {
       "Username or password is invalid",
     );
   });
+
+  it.only("TC-003: Successful User Registration", () => {
+    cy.get('[data-test="signup"]').click();
+    cy.get('[data-test="signup-first-name"]').type("Test");
+    cy.get('[data-test="signup-last-name"]').type("User");
+    cy.get('[data-test="signup-username"]').type("testuser_02");
+    cy.get('[data-test="signup-password"]').type("Test@123");
+    cy.get('[data-test="signup-confirmPassword"]').type("Test@123");
+    cy.get('[data-test="signup-submit"]').click();
+    cy.get('[data-test="signin-username"]').type("testuser_02");
+    cy.get('[data-test="signin-password"]').type("Test@123");
+    cy.get('[data-test="signin-submit"]').click();
+    cy.get('[data-test="user-onboarding-dialog-title"]').should(
+      "contain",
+      "Get Started with Real World App",
+    );
+  });
 });
