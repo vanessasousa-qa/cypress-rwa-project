@@ -39,7 +39,7 @@ describe("User Authentication", () => {
     );
   });
 
-  it.only("TC-004: Registration With Incomplete Information", () => {
+  it("TC-004: Registration With Incomplete Information", () => {
     cy.get('[data-test="signup"]').click();
     cy.get('[data-test="signup-first-name"]').type("Test");
     cy.get('[data-test="signup-last-name"]').type("User");
