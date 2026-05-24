@@ -207,12 +207,12 @@ The "Sign Up" button remains disabled. The error message "Username is required" 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Executed                                                                                            |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 24/05/26                                                                                            |
+| Evidence       | ![TC-004 Evidence](https://github.com/user-attachments/assets/f40ce4bf-9f59-490c-a0cf-30a35d5da9d7) |
 
 ---
 

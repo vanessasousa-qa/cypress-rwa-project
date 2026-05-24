@@ -22,7 +22,7 @@ describe("User Authentication", () => {
     );
   });
 
-  it.only("TC-003: Successful User Registration", () => {
+  it("TC-003: Successful User Registration", () => {
     cy.get('[data-test="signup"]').click();
     cy.get('[data-test="signup-first-name"]').type("Test");
     cy.get('[data-test="signup-last-name"]').type("User");
@@ -36,6 +36,19 @@ describe("User Authentication", () => {
     cy.get('[data-test="user-onboarding-dialog-title"]').should(
       "contain",
       "Get Started with Real World App",
+    );
+  });
+
+  it.only("TC-004: Registration With Incomplete Information", () => {
+    cy.get('[data-test="signup"]').click();
+    cy.get('[data-test="signup-first-name"]').type("Test");
+    cy.get('[data-test="signup-last-name"]').type("User");
+    cy.get('[data-test="signup-username"] input').focus().blur();
+    cy.get('[data-test="signup-password"]').type("Test@1234");
+    cy.get('[data-test="signup-confirmPassword"]').type("Test@1234");
+    cy.get('[data-test="signup-username"]').should(
+      "contain",
+      "Username is required",
     );
   });
 });
