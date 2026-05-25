@@ -1,12 +1,12 @@
 # User Authentication – Test Cases
 
-| Field         | Content                      |
-| ------------- | ---------------------------- |
-| Project       | Cypress Real World App (RWA) |
-| Feature       | User Authentication          |
-| Author        | Vanessa Sousa                |
-| Creation Date | 01/05/2026                   |
-| Status        | In Progress                  |
+| Field         | Content                                      |
+| ------------- | -------------------------------------------- |
+| Project       | Cypress Real World App (RWA)                 |
+| Feature       | User Authentication                          |
+| Author        | Vanessa Sousa                                |
+| Creation Date | 01/05/2026                                   |
+| Status        | Passed Test Cases: 13 / Failed Test Cases: 5 |
 
 ---
 
@@ -57,7 +57,7 @@ The user is successfully authenticated and redirected to the dashboard. The acco
 
 | Field          | Content                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- |
-| Status         | Executed                                                                                            |
+| Status         | Passed                                                                                              |
 | Executed By    | Vanessa Sousa                                                                                       |
 | Execution Date | 23/05/2026                                                                                          |
 | Evidence       | ![TC-001 Evidence](https://github.com/user-attachments/assets/28c0e983-5e16-4830-aa6a-fdc77d93f0e3) |
@@ -103,7 +103,7 @@ The user remains on the login page. An error message is displayed indicating tha
 
 | Field          | Content                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- |
-| Status         | Executed                                                                                            |
+| Status         | Passed                                                                                              |
 | Executed By    | Vanessa Sousa                                                                                       |
 | Execution Date | 23/05/2026                                                                                          |
 | Evidence       | ![TC-002 Evidence](https://github.com/user-attachments/assets/58687933-c693-4b95-9773-c5690b9ed2a4) |
@@ -156,7 +156,7 @@ The user is successfully registered. The system redirects the user to the login 
 
 | Field          | Content                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- |
-| Status         | Executed                                                                                            |
+| Status         | Passed                                                                                              |
 | Executed By    | Vanessa Sousa                                                                                       |
 | Execution Date | 24/05/2026                                                                                          |
 | Evidence       | ![TC-003 Evidence](https://github.com/user-attachments/assets/9fcb8f15-9afa-4233-a6d2-3d774bd7f2af) |
@@ -209,7 +209,7 @@ The "Sign Up" button remains disabled. The error message "Username is required" 
 
 | Field          | Content                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- |
-| Status         | Executed                                                                                            |
+| Status         | Passed                                                                                              |
 | Executed By    | Vanessa Sousa                                                                                       |
 | Execution Date | 24/05/26                                                                                            |
 | Evidence       | ![TC-004 Evidence](https://github.com/user-attachments/assets/f40ce4bf-9f59-490c-a0cf-30a35d5da9d7) |
@@ -252,12 +252,12 @@ The "Sign In" button remains disabled. The error message "Username is required" 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-005 Evidence](https://github.com/user-attachments/assets/2fbb6c51-759e-48d8-85e2-4f0a21ff8ad4) |
 
 ---
 
@@ -297,12 +297,12 @@ The "Sign In" button remains disabled. The user is not able to submit the login 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-006 Evidence](https://github.com/user-attachments/assets/9b17a51b-e29a-4a59-9b64-16ba67c16cf2) |
 
 ---
 
@@ -340,12 +340,12 @@ The error message "Username is required" is displayed below the username field. 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-007 Evidence](https://github.com/user-attachments/assets/7e297617-3df3-40e3-a978-4fbcb48b0341) |
 
 ---
 
@@ -371,7 +371,6 @@ Feature: User Authentication
     And I click the "Sign In" button
     Then I should remain on the login page
     And I should see the error message "Username or password is invalid"
-    And the "Sign In" button should become disabled
 ```
 
 #### Test Data
@@ -383,16 +382,16 @@ Feature: User Authentication
 
 #### Expected Result
 
-The user remains on the login page. The error message "Username or password is invalid" is displayed. The "Sign In" button becomes disabled after the submission attempt.
+The user remains on the login page. The error message "Username or password is invalid" is displayed.
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-008 Evidence](https://github.com/user-attachments/assets/e9544d02-fa83-480e-bf98-34c11d1105e8) |
 
 ---
 
@@ -437,12 +436,12 @@ The user session persists after closing and reopening the browser. The user is a
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-009 Evidence](https://github.com/user-attachments/assets/6bc6e796-f208-41c5-8929-73ee6b075e06) |
 
 ---
 
@@ -489,16 +488,16 @@ The user session should expire after closing the browser. The user should be red
 
 ⚠️ BUG: The session persists after closing the browser even with Remember Me disabled. The user is automatically redirected to the dashboard without being required to login again.
 
-Bug Reference: BUG-001 – Reported in Jira.
+Bug Reference: BUG-001 – Reported in Confluence and GitHub
 
 #### Execution Status
 
-| Field          | Content                |
-| -------------- | ---------------------- |
-| Status         | Failed                 |
-| Executed By    | Vanessa Sousa          |
-| Execution Date | 05/05/2026             |
-| Evidence       | Pending Loom recording |
+| Field          | Content                                                                         |
+| -------------- | ------------------------------------------------------------------------------- |
+| Status         | Failed                                                                          |
+| Executed By    | Vanessa Sousa                                                                   |
+| Execution Date | 05/05/2026                                                                      |
+| Evidence       | ![TC-010 Evidence](https://www.loom.com/share/5634511636b948cc92c7bea3925a7174) |
 
 ---
 
@@ -545,12 +544,12 @@ The "Sign Up" button remains disabled. The error message "Password must contain 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-011 Evidence](https://github.com/user-attachments/assets/6e4c1520-eba5-4697-9cfa-34687722e0ae) |
 
 ---
 
@@ -600,16 +599,16 @@ The system should display an error message indicating that the username already 
 
 ⚠️ BUG: The system redirects the user to the login page without displaying an error message. When attempting to login with the new credentials, the message "Username or password is invalid" is displayed.
 
-Bug Reference: BUG-002 – Reported in Jira.
+Bug Reference: BUG-002 – Reported in Confluence and GitHub.
 
 #### Execution Status
 
-| Field          | Content                |
-| -------------- | ---------------------- |
-| Status         | Failed                 |
-| Executed By    | Vanessa Sousa          |
-| Execution Date | 05/05/2026             |
-| Evidence       | Pending Loom recording |
+| Field          | Content                                                                         |
+| -------------- | ------------------------------------------------------------------------------- |
+| Status         | Failed                                                                          |
+| Executed By    | Vanessa Sousa                                                                   |
+| Execution Date | 05/05/2026                                                                      |
+| Evidence       | ![TC-012 Evidence](https://www.loom.com/share/2d43d161561e4254a9f21a16f7620d34) |
 
 ---
 
@@ -656,12 +655,12 @@ The "Sign Up" button remains disabled. The error message "Password does not matc
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-013 Evidence](https://github.com/user-attachments/assets/46aec270-8ac2-4f33-a352-1277972041e0) |
 
 ---
 
@@ -699,12 +698,12 @@ The "Sign Up" button becomes disabled after the submission attempt. The error me
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-014 Evidence](https://github.com/user-attachments/assets/7b8541a7-5369-4c93-a205-e0c88170aedc) |
 
 ---
 
@@ -754,16 +753,16 @@ The system should display validation error messages indicating that the fields c
 
 ⚠️ BUG: The system accepts whitespace in all fields, including the password field, bypassing all input validation. The user is redirected to the login page. When attempting to login with the whitespace credentials, the message "Username or password is invalid" is displayed.
 
-Bug Reference: BUG-003 – Reported in Jira.
+Bug Reference: BUG-003 – Reported in Confluence and GitHub.
 
 #### Execution Status
 
-| Field          | Content                |
-| -------------- | ---------------------- |
-| Status         | Failed                 |
-| Executed By    | Vanessa Sousa          |
-| Execution Date | 05/05/2026             |
-| Evidence       | Pending Loom recording |
+| Field          | Content                                                                         |
+| -------------- | ------------------------------------------------------------------------------- |
+| Status         | Failed                                                                          |
+| Executed By    | Vanessa Sousa                                                                   |
+| Execution Date | 05/05/2026                                                                      |
+| Evidence       | ![TC-015 Evidence](https://www.loom.com/share/53a0c7975cc44ef49554b9be693cd28b) |
 
 ---
 
@@ -813,16 +812,16 @@ The system should display a validation error message indicating that the maximum
 
 ⚠️ BUG: The system accepts excessively long input in all fields without any validation. The user is successfully registered and redirected to the dashboard with no error messages displayed.
 
-Bug Reference: BUG-004 – Reported in Jira.
+Bug Reference: BUG-004 – Reported in Confluence and GitHub.
 
 #### Execution Status
 
-| Field          | Content                |
-| -------------- | ---------------------- |
-| Status         | Failed                 |
-| Executed By    | Vanessa Sousa          |
-| Execution Date | 05/05/2026             |
-| Evidence       | Pending Loom recording |
+| Field          | Content                                                                         |
+| -------------- | ------------------------------------------------------------------------------- |
+| Status         | Failed                                                                          |
+| Executed By    | Vanessa Sousa                                                                   |
+| Execution Date | 05/05/2026                                                                      |
+| Evidence       | ![TC-016 Evidence](https://www.loom.com/share/06ba9e48a2044adeb4223d742731313f) |
 
 ---
 
@@ -869,12 +868,12 @@ The "Sign Up" button remains disabled. The error message "Password must contain 
 
 #### Execution Status
 
-| Field          | Content       |
-| -------------- | ------------- |
-| Status         | Not Executed  |
-| Executed By    | Vanessa Sousa |
-| Execution Date | -             |
-| Evidence       | -             |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 25/05/2026                                                                                          |
+| Evidence       | ![TC-017 Evidence](https://github.com/user-attachments/assets/fde19eea-9344-447e-8672-e1efe835aa6a) |
 
 ---
 
@@ -924,13 +923,13 @@ The system should display a validation error message indicating that the text fi
 
 ⚠️ BUG: The system accepts a single character in all text fields without any minimum length validation. The user is successfully registered and redirected to the dashboard with no error messages displayed.
 
-Bug Reference: BUG-005 – Reported in Jira.
+Bug Reference: BUG-005 – Reported in Confluence and GitHub.
 
 #### Execution Status
 
-| Field          | Content                |
-| -------------- | ---------------------- |
-| Status         | Failed                 |
-| Executed By    | Vanessa Sousa          |
-| Execution Date | 05/05/2026             |
-| Evidence       | Pending Loom recording |
+| Field          | Content                                                                         |
+| -------------- | ------------------------------------------------------------------------------- |
+| Status         | Failed                                                                          |
+| Executed By    | Vanessa Sousa                                                                   |
+| Execution Date | 05/05/2026                                                                      |
+| Evidence       | ![TC-018 Evidence](https://www.loom.com/share/4ae80ca0929d4d4e93c4f2dcafaabd1f) |
