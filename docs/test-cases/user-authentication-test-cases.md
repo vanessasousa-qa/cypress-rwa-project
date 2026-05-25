@@ -497,7 +497,7 @@ Bug Reference: BUG-001 – Reported in Confluence and GitHub
 | Status         | Failed                                                                          |
 | Executed By    | Vanessa Sousa                                                                   |
 | Execution Date | 05/05/2026                                                                      |
-| Evidence       | ![TC-010 Evidence](https://www.loom.com/share/5634511636b948cc92c7bea3925a7174) |
+| Evidence       | [🎥 View Evidence](https://www.loom.com/share/5634511636b948cc92c7bea3925a7174) |
 
 ---
 
@@ -608,7 +608,7 @@ Bug Reference: BUG-002 – Reported in Confluence and GitHub.
 | Status         | Failed                                                                          |
 | Executed By    | Vanessa Sousa                                                                   |
 | Execution Date | 05/05/2026                                                                      |
-| Evidence       | ![TC-012 Evidence](https://www.loom.com/share/2d43d161561e4254a9f21a16f7620d34) |
+| Evidence       | [🎥 View Evidence](https://www.loom.com/share/2d43d161561e4254a9f21a16f7620d34) |
 
 ---
 
@@ -762,7 +762,7 @@ Bug Reference: BUG-003 – Reported in Confluence and GitHub.
 | Status         | Failed                                                                          |
 | Executed By    | Vanessa Sousa                                                                   |
 | Execution Date | 05/05/2026                                                                      |
-| Evidence       | ![TC-015 Evidence](https://www.loom.com/share/53a0c7975cc44ef49554b9be693cd28b) |
+| Evidence       | [🎥 View Evidence](https://www.loom.com/share/53a0c7975cc44ef49554b9be693cd28b) |
 
 ---
 
@@ -821,7 +821,7 @@ Bug Reference: BUG-004 – Reported in Confluence and GitHub.
 | Status         | Failed                                                                          |
 | Executed By    | Vanessa Sousa                                                                   |
 | Execution Date | 05/05/2026                                                                      |
-| Evidence       | ![TC-016 Evidence](https://www.loom.com/share/06ba9e48a2044adeb4223d742731313f) |
+| Evidence       | [🎥 View Evidence](https://www.loom.com/share/06ba9e48a2044adeb4223d742731313f) |
 
 ---
 
@@ -932,4 +932,4 @@ Bug Reference: BUG-005 – Reported in Confluence and GitHub.
 | Status         | Failed                                                                          |
 | Executed By    | Vanessa Sousa                                                                   |
 | Execution Date | 05/05/2026                                                                      |
-| Evidence       | ![TC-018 Evidence](https://www.loom.com/share/4ae80ca0929d4d4e93c4f2dcafaabd1f) |
+| Evidence       | [🎥 View Evidence](https://www.loom.com/share/4ae80ca0929d4d4e93c4f2dcafaabd1f) |
