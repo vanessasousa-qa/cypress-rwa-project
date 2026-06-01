@@ -1,12 +1,12 @@
 # Send Money – Test Cases
 
-| Field | Content |
-|---|---|
-| Project | Cypress Real World App (RWA) |
-| Feature | Send Money |
-| Author | Vanessa Sousa |
-| Creation Date | 09/05/2026 |
-| Status | In Progress |
+| Field         | Content                      |
+| ------------- | ---------------------------- |
+| Project       | Cypress Real World App (RWA) |
+| Feature       | Send Money                   |
+| Author        | Vanessa Sousa                |
+| Creation Date | 09/05/2026                   |
+| Status        | In Progress                  |
 
 ---
 
@@ -20,12 +20,12 @@ This page contains the test cases for the Send Money feature of the Cypress Real
 
 ### TC-019: Send Money Successfully
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-019 |
-| Feature | Send Money |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-019                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Automated                                                                                                                                                                                               |
+| Priority      | Critical                                                                                                                                                                                                |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -40,7 +40,7 @@ Feature: Send Money
     And I enter a valid amount in the amount field
     And I enter a note in the add note field
     And I click the "Pay" button
-    Then I should see the confirmation message "Paid $[amount] for [note]"
+    Then I should see the confirmation message "Paid $15.00 for Test123"
     And a notification "Transaction submitted" should be displayed
     And the sender's account balance should be decreased by the sent amount
     And the transaction should appear in the transaction history
@@ -48,13 +48,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | $15.00 |
-| Note | test123 |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | 15                        |
+| Note            | test123                   |
 
 #### Expected Result
 
@@ -62,23 +62,23 @@ The payment is processed successfully. The confirmation message "Paid $15.00 for
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Passed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 01/06/2026                                                                                          |
+| Evidence       | ![TC-019 Evidence](https://github.com/user-attachments/assets/3b9c8c5c-114c-4123-b514-88e4afbfdf4e) |
 
 ---
 
 ### TC-020: Send Money with Insufficient Funds
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-020 |
-| Feature | Send Money |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Case ID  | TC-020                                                                                                                                                       |
+| Feature       | Send Money                                                                                                                                                   |
+| Type          | Automated                                                                                                                                                    |
+| Priority      | Critical                                                                                                                                                     |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The database has been seeded. At least one contact exists in the system. |
 
 #### Scenario
@@ -100,37 +100,43 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | $2,000.00 |
-| Note | test insufficient funds |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | 2000                      |
+| Note            | test insufficient funds   |
 
 #### Expected Result
 
-Pending verification – to be completed during test execution.
+The system should display an error message indicating insufficient funds. The transaction should not be processed. The sender's account balance should remain unchanged.
+
+#### Actual Result
+
+⚠️ BUG: The system processes the transaction even when the amount exceeds the account balance. The confirmation message "Paid $2,000.00 for test insufficient funds" is displayed and a "Transaction submitted" notification appears. The transaction is recorded in the history.
+
+Bug Reference: BUG-006 – Reported in Confluence and GitHub
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Status         | Failed                                                                                              |
+| Executed By    | Vanessa Sousa                                                                                       |
+| Execution Date | 01/06/2026                                                                                          |
+| Evidence       | ![TC-020 Evidence](https://github.com/user-attachments/assets/e433fba6-918b-46b5-8dbc-664c1e8136d2) |
 
 ---
 
 ### TC-021: Verify Account Balance is Updated After Sending Money
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-021 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-021                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Manual                                                                                                                                                                                                  |
+| Priority      | Critical                                                                                                                                                                                                |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -152,15 +158,15 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Initial Balance | $1,568.80 |
-| Amount | $15.00 |
-| Note | balance test |
-| Expected Balance After | $1,553.80 |
+| Field                  | Value                     |
+| ---------------------- | ------------------------- |
+| Sender Username        | Dina20                    |
+| Sender Password        | s3cret                    |
+| Recipient              | Any contact from the list |
+| Initial Balance        | $1,568.80                 |
+| Amount                 | $15.00                    |
+| Note                   | balance test              |
+| Expected Balance After | $1,553.80                 |
 
 #### Expected Result
 
@@ -168,23 +174,23 @@ The payment is processed successfully. The account balance is decreased by the s
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-022: Send Money with a Note
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-022 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-022                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Manual                                                                                                                                                                                                  |
+| Priority      | Medium                                                                                                                                                                                                  |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -207,13 +213,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | $15.00 |
-| Note | payment for lunch |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | $15.00                    |
+| Note            | payment for lunch         |
 
 #### Expected Result
 
@@ -221,23 +227,23 @@ The payment is processed successfully. The confirmation message "Paid $15.00 for
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-023: Send Money without Selecting a Contact
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-023 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-023                                                                                                            |
+| Feature       | Send Money                                                                                                        |
+| Type          | Manual                                                                                                            |
+| Priority      | Medium                                                                                                            |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The database has been seeded. |
 
 #### Scenario
@@ -264,23 +270,23 @@ The system does not allow the user to proceed to the next step without selecting
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-024: Send Money without Entering an Amount
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-024 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Case ID  | TC-024                                                                                                                                                       |
+| Feature       | Send Money                                                                                                                                                   |
+| Type          | Manual                                                                                                                                                       |
+| Priority      | High                                                                                                                                                         |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -308,23 +314,23 @@ The "Pay" and "Request" buttons remain disabled. The error message "Please enter
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-025: Send Money without Adding a Note
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-025 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-025                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Manual                                                                                                                                                                                                  |
+| Priority      | Medium                                                                                                                                                                                                  |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -345,13 +351,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | $15.00 |
-| Note | (left blank) |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | $15.00                    |
+| Note            | (left blank)              |
 
 #### Expected Result
 
@@ -359,23 +365,23 @@ The "Pay" and "Request" buttons remain disabled. The error message "Please enter
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-026: Send Money with a Negative Value
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-026 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-026                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Manual                                                                                                                                                                                                  |
+| Priority      | High                                                                                                                                                                                                    |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -396,13 +402,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | -5 |
-| Note | negative value test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | -5                        |
+| Note            | negative value test       |
 
 #### Expected Result
 
@@ -416,23 +422,23 @@ Bug Reference: BUG-006 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 09/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 09/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-027: Send Money with Amount Exceeding Balance by One Unit
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-027 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                                                     |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-027                                                                                                                                                                                                      |
+| Feature       | Send Money                                                                                                                                                                                                  |
+| Type          | Manual                                                                                                                                                                                                      |
+| Priority      | Critical                                                                                                                                                                                                    |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender's current account balance is known. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -455,14 +461,14 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Current Balance | $1,568.80 |
-| Amount | $1,569.80 |
-| Note | exceeding balance test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Current Balance | $1,568.80                 |
+| Amount          | $1,569.80                 |
+| Note            | exceeding balance test    |
 
 #### Expected Result
 
@@ -476,23 +482,23 @@ Bug Reference: BUG-009 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 09/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 09/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-028: Send Money with Letters in the Amount Field
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-028 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Case ID  | TC-028                                                                                                                                                       |
+| Feature       | Send Money                                                                                                                                                   |
+| Type          | Manual                                                                                                                                                       |
+| Priority      | Medium                                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -512,13 +518,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | abcdef |
-| Note | letters test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | abcdef                    |
+| Note            | letters test              |
 
 #### Expected Result
 
@@ -526,23 +532,23 @@ The amount field does not accept letters and remains blank. The "Pay" and "Reque
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-029: Send Money with Decimal Point Only in Amount Field
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-029 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Case ID  | TC-029                                                                                                                                                       |
+| Feature       | Send Money                                                                                                                                                   |
+| Type          | Manual                                                                                                                                                       |
+| Priority      | High                                                                                                                                                         |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -563,13 +569,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | . |
-| Note | decimal point test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | .                         |
+| Note            | decimal point test        |
 
 #### Expected Result
 
@@ -583,23 +589,23 @@ Bug Reference: BUG-007 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 09/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 09/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-030: Send Money with Invalid Decimal Value
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-030 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-030                                                                                                                                                                                                  |
+| Feature       | Send Money                                                                                                                                                                                              |
+| Type          | Manual                                                                                                                                                                                                  |
+| Priority      | High                                                                                                                                                                                                    |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The sender has sufficient account balance. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -620,13 +626,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | 0.664 |
-| Note | invalid decimal test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | 0.664                     |
+| Note            | invalid decimal test      |
 
 #### Expected Result
 
@@ -640,23 +646,23 @@ Bug Reference: BUG-008 – Reported in Jira.
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Failed |
-| Executed By | Vanessa Sousa |
-| Execution Date | 09/05/2026 |
-| Evidence | Pending Loom recording |
+| Field          | Content                |
+| -------------- | ---------------------- |
+| Status         | Failed                 |
+| Executed By    | Vanessa Sousa          |
+| Execution Date | 09/05/2026             |
+| Evidence       | Pending Loom recording |
 
 ---
 
 ### TC-031: Request Money from a Contact
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-031 |
-| Feature | Send Money |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Case ID  | TC-031                                                                                                                                                       |
+| Feature       | Send Money                                                                                                                                                   |
+| Type          | Manual                                                                                                                                                       |
+| Priority      | Medium                                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one contact exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -678,13 +684,13 @@ Feature: Send Money
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Sender Username | Dina20 |
-| Sender Password | s3cret |
-| Recipient | Any contact from the list |
-| Amount | $15.00 |
-| Note | request money test |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Sender Username | Dina20                    |
+| Sender Password | s3cret                    |
+| Recipient       | Any contact from the list |
+| Amount          | $15.00                    |
+| Note            | request money test        |
 
 #### Expected Result
 
@@ -692,9 +698,9 @@ The money request is submitted successfully. The confirmation message "Requested
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
