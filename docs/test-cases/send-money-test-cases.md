@@ -125,7 +125,7 @@ Bug Reference: BUG-006 – Reported in Confluence and GitHub
 | Status         | Failed                                                                                              |
 | Executed By    | Vanessa Sousa                                                                                       |
 | Execution Date | 01/06/2026                                                                                          |
-| Evidence       | ![TC-020 Evidence](https://github.com/user-attachments/assets/e433fba6-918b-46b5-8dbc-664c1e8136d2) |
+| Evidence       | ![TC-020 Evidence](https://github.com/user-attachments/assets/c6b1dd31-2c3a-4fcf-8ee8-e3ada3d6c3e5) |
 
 ---
 

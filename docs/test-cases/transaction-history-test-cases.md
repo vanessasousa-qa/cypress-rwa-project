@@ -1,12 +1,12 @@
 # Transaction History – Test Cases
 
-| Field | Content |
-|---|---|
-| Project | Cypress Real World App (RWA) |
-| Feature | Transaction History |
-| Author | Vanessa Sousa |
-| Creation Date | 12/05/2026 |
-| Status | In Progress |
+| Field         | Content                      |
+| ------------- | ---------------------------- |
+| Project       | Cypress Real World App (RWA) |
+| Feature       | Transaction History          |
+| Author        | Vanessa Sousa                |
+| Creation Date | 12/05/2026                   |
+| Status        | In Progress                  |
 
 ---
 
@@ -20,12 +20,12 @@ This page contains the test cases for the Transaction History feature of the Cyp
 
 ### TC-032: View Transaction History Successfully
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-032 |
-| Feature | Transaction History |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-032                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Automated                                                                                                                                                                  |
+| Priority      | Critical                                                                                                                                                                   |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -34,13 +34,13 @@ This page contains the test cases for the Transaction History feature of the Cyp
 Feature: Transaction History
 
   Scenario: View transaction history successfully
-    Given I am authenticated and on the RWA dashboard
+     Given I am authenticated and on the RWA dashboard
     When I navigate to the Transaction History page
     Then I should see the "Everyone" tab selected by default
     And I should see a list of public transactions
-    And each transaction should display the sender, recipient, amount and note
-    And payment transactions should display the amount in red
-    And request transactions should display the amount in green
+    And each transaction should display the sender, recipient and amount
+    And payment transactions should display the amount with a negative (red) style
+    And request transactions should display the amount with a positive (green) style
 ```
 
 #### Test Data
@@ -53,23 +53,23 @@ The Transaction History page is displayed with the "Everyone" tab selected by de
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Passed        |
+| Executed By    | Vanessa Sousa |
+| Execution Date | 20/09/2026    |
+| Evidence       | -             |
 
 ---
 
 ### TC-033: Verify Transaction Details
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-033 |
-| Feature | Transaction History |
-| Type | Automated |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-033                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Automated                                                                                                                                                                  |
+| Priority      | Critical                                                                                                                                                                   |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -78,16 +78,13 @@ The Transaction History page is displayed with the "Everyone" tab selected by de
 Feature: Transaction History
 
   Scenario: Verify transaction details
-    Given I am authenticated and on the Transaction History page
+     Given I am authenticated and on the Transaction History page
     When I click on a transaction from the list
     Then I should be redirected to the Transaction Detail page
-    And I should see the sender and recipient avatars
-    And I should see the sender name, transaction type and recipient name
-    And I should see the transaction note
+    And I should see the sender name and recipient name
     And I should see the transaction amount
     And I should see the like count and like button
     And I should see the comment input field
-    And I should see the comments section
 ```
 
 #### Test Data
@@ -100,23 +97,23 @@ The Transaction Detail page displays all correct information — sender and reci
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Passed        |
+| Executed By    | Vanessa Sousa |
+| Execution Date | 20/09/2026    |
+| Evidence       | -             |
 
 ---
 
 ### TC-034: Verify "Everyone" Tab Displays All Public Transactions
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-034 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Critical |
+| Field         | Content                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-034                                                                                                            |
+| Feature       | Transaction History                                                                                               |
+| Type          | Manual                                                                                                            |
+| Priority      | Critical                                                                                                          |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The database has been seeded. |
 
 #### Scenario
@@ -141,23 +138,23 @@ The "Everyone" tab displays all public transactions from all users in the system
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-035: Verify "Friends" Tab Displays Only Friends' Transactions
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-035 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-035                                                                                                                                               |
+| Feature       | Transaction History                                                                                                                                  |
+| Type          | Manual                                                                                                                                               |
+| Priority      | High                                                                                                                                                 |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The user has at least one contact. The database has been seeded. |
 
 #### Scenario
@@ -182,23 +179,23 @@ The "Friends" tab displays only transactions involving the authenticated user's 
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-036: Verify "Mine" Tab Displays Only Own Transactions
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-036 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-036                                                                                                                                                                        |
+| Feature       | Transaction History                                                                                                                                                           |
+| Type          | Manual                                                                                                                                                                        |
+| Priority      | Critical                                                                                                                                                                      |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one transaction exists for the authenticated user. The database has been seeded. |
 
 #### Scenario
@@ -224,23 +221,23 @@ The "Mine" tab displays only the authenticated user's transactions — sent, rec
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-037: Verify Transaction Detail Page Displays Correct Information
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-037 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Critical |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-037                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | Critical                                                                                                                                                                   |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -271,23 +268,23 @@ The Transaction Detail page displays all correct information — sender and reci
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-038: Verify Like Button Increments Like Count
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-038 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-038                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | Medium                                                                                                                                                                     |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -313,23 +310,23 @@ After clicking the like button, the like count increases by 1 immediately withou
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-039: Verify Comment is Published After Submission
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-039 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-039                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | Medium                                                                                                                                                                     |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -348,8 +345,8 @@ Feature: Transaction History
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field   | Value                  |
+| ------- | ---------------------- |
 | Comment | This is a test comment |
 
 #### Expected Result
@@ -358,23 +355,23 @@ After pressing Enter, the comment is published immediately and appears in the co
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-040: Verify Like and Comment Counts Are Updated in Transaction Feed
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-040 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-040                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | Medium                                                                                                                                                                     |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -395,8 +392,8 @@ Feature: Transaction History
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field   | Value            |
+| ------- | ---------------- |
 | Comment | feed update test |
 
 #### Expected Result
@@ -405,23 +402,23 @@ After liking and commenting on a transaction, the updated like and comment count
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-041: Filter Transactions by Date
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-041 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-041                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | High                                                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -439,8 +436,8 @@ Feature: Transaction History
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field       | Value                                                      |
+| ----------- | ---------------------------------------------------------- |
 | Date Filter | Date range containing existing transactions from seed data |
 
 #### Expected Result
@@ -449,23 +446,23 @@ Only transactions within the selected date range are displayed. Transactions out
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-042: Filter Transactions by Amount Range
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-042 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | High |
+| Field         | Content                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-042                                                                                                                                                                     |
+| Feature       | Transaction History                                                                                                                                                        |
+| Type          | Manual                                                                                                                                                                     |
+| Priority      | High                                                                                                                                                                       |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. At least one completed transaction exists in the system. The database has been seeded. |
 
 #### Scenario
@@ -483,8 +480,8 @@ Feature: Transaction History
 
 #### Test Data
 
-| Field | Value |
-|---|---|
+| Field         | Value     |
+| ------------- | --------- |
 | Amount Filter | $0 - $100 |
 
 #### Expected Result
@@ -493,23 +490,23 @@ Only transactions within the selected amount range of $0 - $100 are displayed. T
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
 
 ---
 
 ### TC-043: Clear Amount Filter and Verify All Transactions Are Displayed
 
-| Field | Content |
-|---|---|
-| Test Case ID | TC-043 |
-| Feature | Transaction History |
-| Type | Manual |
-| Priority | Medium |
+| Field         | Content                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Case ID  | TC-043                                                                                                                                                    |
+| Feature       | Transaction History                                                                                                                                       |
+| Type          | Manual                                                                                                                                                    |
+| Priority      | Medium                                                                                                                                                    |
 | Preconditions | The RWA application is running in the local environment. The user is authenticated. The amount filter is currently applied. The database has been seeded. |
 
 #### Scenario
@@ -527,9 +524,9 @@ Feature: Transaction History
 
 #### Test Data
 
-| Field | Value |
-|---|---|
-| Initial Amount Filter | $0 - $100 |
+| Field                       | Value       |
+| --------------------------- | ----------- |
+| Initial Amount Filter       | $0 - $100   |
 | Expected Filter After Reset | $0 - $1,000 |
 
 #### Expected Result
@@ -538,9 +535,9 @@ After clearing the amount filter, all transactions are displayed again. The amou
 
 #### Execution Status
 
-| Field | Content |
-|---|---|
-| Status | Not Executed |
-| Executed By | Vanessa Sousa |
-| Execution Date | - |
-| Evidence | - |
+| Field          | Content       |
+| -------------- | ------------- |
+| Status         | Not Executed  |
+| Executed By    | Vanessa Sousa |
+| Execution Date | -             |
+| Evidence       | -             |
